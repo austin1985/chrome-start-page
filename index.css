@@ -59,3 +59,16 @@ input {
     outline: none; /*remove input outline*/
 }
 
+.icon-wrapper {
+    position:absolute;
+    bottom:20;
+    left:20;
+}
+
+i {
+    text-align: center;
+    padding-left: 15px;
+    font-size: 30px;
+    color: white;
+    text-shadow: 2px 2px 5px #333;
+}

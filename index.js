@@ -1,7 +1,15 @@
-// Default
+// Default variables
 var user = "Mihály!"
+var facebook = "https://www.facebook.com/"
+var instagram = "https://www.instagram.com/"
+var linkedin = "https://www.linkedin.com/"
+var twitter = "https://twitter.com/"
+var youtube = "https://www.youtube.com"
+var website = "#"
+
 
 /**
+ * api.openweathermap.org/data/2.5
  *  
  * Message block
  *  
@@ -76,7 +84,7 @@ function googleSearch() {
         // Number 13 is Enters
         if (event.keyCode === 13) {
             event.preventDefault();
-            window.open(baseUrl+input.value, '_blank');
+            window.open(baseUrl + input.value, '_blank');
             input.value = ""
             //window.location.replace(baseUrl+input.value);
         }
@@ -84,18 +92,46 @@ function googleSearch() {
 
 }
 
-
-
-
-
 /**
-*  
-* Weather block
-*  
-* */
+ * 
+ * Icon block
+ * 
+ */
+
+function displayIcons() {
+    var markup = ""
+    var icons = document.getElementById("icon-wrapper");
+
+    if (facebook !== null) {
+        markup += '<a href="' + facebook + '" target="_blank"><i class="fab fa-facebook-square"></i></a>'
+    }
+    if (instagram !== null) {
+        markup += '<a href="' + instagram + '" target="_blank"><i class="fab fa-instagram"></i></a>'
+    }
+    if (twitter !== null) {
+        markup += '<a href="' + twitter + '" target="_blank"><i class="fab fa-twitter"></i></a>'
+    }
+    if (linkedin !== null) {
+        markup += '<a href="' + linkedin + '" target="_blank"><i class="fab fa-linkedin-in"></i></a>'
+    }
+    if (youtube !== null) {
+        markup += '<a href="' + youtube + '" target="_blank"><i class="fab fa-youtube"></i></a>'
+    }
+    if (website !== null) {
+        markup += '<a href="' + website + '" target="_blank"><i class="fas fa-globe"></i></a>'
+    }
+
+    console.log(markup)
+    icons.innerHTML = markup
+
+}
+
+
 
 
 // Running the functions
 getCurrentTime()
 addDayTimeMessage()
+displayIcons()
+//getCurrentWeather()
 googleSearch()
