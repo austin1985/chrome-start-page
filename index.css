@@ -1,0 +1,61 @@
+body {
+    background: url('images/lake.jpg') no-repeat;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.clock-wrapper{
+    width:700px;
+    height:500px;
+    margin:0 auto;
+    /*border: 5px solid white;*/
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin-left:-350px;
+    margin-top:-250px;
+}
+
+.clock {
+    font-size: 150px;
+    text-shadow: 2px 2px 5px #333;
+    color: white;
+    text-align:center;
+}
+
+.message {
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px 5px #333;
+}
+
+.google-input {
+    padding-top:100px;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 5px #333;
+}
+
+.google-label {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    text-shadow: 2px 2px 5px #333;
+}
+
+input {
+    text-align: center;
+    color:white;
+    font-size:20px;
+    height:30px;
+    width:30%;
+    text-shadow: 2px 2px 5px #333;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    box-shadow: 0 4px 3px -3px #222; 
+    outline: none; /*remove input outline*/
+}
+
