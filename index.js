@@ -1,5 +1,5 @@
 // Default variables
-var user = "Mihály!"
+var user = "User!"
 var facebook = "https://www.facebook.com/"
 var instagram = "https://www.instagram.com/"
 var linkedin = "https://www.linkedin.com/"
@@ -14,7 +14,7 @@ var website = "#"
  * Message block
  *  
  * */
-function addDayTimeMessage() {
+function displayTimeMessage() {
     var currentMessageDate = new Date();
     var message_hour = currentMessageDate.getHours()
     var message = document.getElementById("message");
@@ -31,10 +31,10 @@ function addDayTimeMessage() {
     }
     // Morning
     if (message_hour >= 0 && message_hour < 12) {
-        message.textContent = "Good Evening " + user
-        message.innerText = "Good Evening " + user
+        message.textContent = "Good Morning " + user
+        message.innerText = "Good Morning " + user
     }
-    setTimeout("getCurrentTime()", 60000)
+    setTimeout("displayTimeMessage", 60000)
 }
 
 
@@ -121,17 +121,23 @@ function displayIcons() {
         markup += '<a href="' + website + '" target="_blank"><i class="fas fa-globe"></i></a>'
     }
 
-    console.log(markup)
     icons.innerHTML = markup
-
 }
 
 
-
+/**
+ * 
+ * Weatcher block
+ * 
+ */
+function displayWeather(){
+    
+    displayWeatherWidget()
+}
 
 // Running the functions
 getCurrentTime()
-addDayTimeMessage()
+displayTimeMessage()
 displayIcons()
-//getCurrentWeather()
+displayWeather()
 googleSearch()

@@ -1,74 +1,154 @@
 body {
-    background: url('images/lake.jpg') no-repeat;
-    background-size: cover;
-    font-family: Arial, Helvetica, sans-serif
+  background: url("images/lake.jpg") no-repeat;
+  background-size: cover;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.clock-wrapper{
-    width:700px;
-    height:500px;
-    margin:0 auto;
-    /*border: 5px solid white;*/
-    position:absolute;
-    left:50%;
-    top:50%;
-    margin-left:-350px;
-    margin-top:-250px;
+hr {
+    margin-bottom:15px;
+    color: white;
+    border:1px solid white;
+    text-shadow: 2px 2px 5px #333;
+}
+
+.clock-wrapper {
+  width: 700px;
+  height: 500px;
+  margin: 0 auto;
+  /*border: 5px solid white;*/
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -350px;
+  margin-top: -250px;
 }
 
 .clock {
-    font-size: 150px;
-    text-shadow: 2px 2px 5px #333;
-    color: white;
-    text-align:center;
+  font-size: 150px;
+  text-shadow: 2px 2px 5px #333;
+  color: white;
+  text-align: center;
 }
 
 .message {
-    text-align: center;
-    font-size: 40px;
-    color: white;
-    text-shadow: 2px 2px 5px #333;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  text-shadow: 2px 2px 5px #333;
 }
 
 .google-input {
-    padding-top:100px;
-    text-align: center;
-    font-size: 50px;
-    color: white;
-    text-shadow: 2px 2px 5px #333;
+  padding-top: 100px;
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  text-shadow: 2px 2px 5px #333;
 }
 
 .google-label {
-    text-align: center;
-    font-size: 30px;
-    color: white;
-    text-shadow: 2px 2px 5px #333;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  text-shadow: 2px 2px 5px #333;
 }
 
 input {
-    text-align: center;
-    color:white;
-    font-size:20px;
-    height:30px;
-    width:30%;
-    text-shadow: 2px 2px 5px #333;
-    background: transparent;
-    border: none;
-    border-bottom: 2px solid white;
-    box-shadow: 0 4px 3px -3px #222; 
-    outline: none; /*remove input outline*/
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  height: 30px;
+  width: 30%;
+  text-shadow: 2px 2px 5px #333;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  box-shadow: 0 4px 3px -3px #222;
+  outline: none; /*remove input outline*/
 }
 
 .icon-wrapper {
-    position:absolute;
-    bottom:20;
-    left:20;
+  position: absolute;
+  bottom: 20;
+  left: 20;
 }
 
 i {
-    text-align: center;
-    padding-left: 15px;
-    font-size: 30px;
+  text-align: center;
+  padding-left: 15px;
+  font-size: 30px;
+  color: white;
+  text-shadow: 2px 2px 5px #333;
+}
+
+.weather {
+  position: absolute;
+  top: 20;
+  right: 20;
+  color: white;
+  text-shadow: 2px 2px 5px #333;
+}
+
+.weather-content {
+  color: white;
+  height: 100px;
+}
+
+/*Temperature number and icon block*/
+.weather-temp {
+  text-align: center;
+  display: inline-block;
+}
+
+.weather-temp-number {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.weather-temp i {
+  vertical-align: top;
+  padding-left: unset;
+  font-size: 20px;
+  text-shadow: 2px 2px 5px #333;
+}
+
+/*Main big icon styles*/
+.weather-main-icon-wrapper {
+  display: inline-block;
+  text-align: center;
+  font-size: 12px;
+  padding-right: 10px;
+  vertical-align: top;
+}
+
+.weather-main-icon-wrapper i {
+  padding-left: unset;
+  padding-bottom: 5px;
+  font-size: 70px;
+}
+
+/*Wind and humidity styles*/
+.weather-temp-misc {
+    font-size:15;
     color: white;
     text-shadow: 2px 2px 5px #333;
+}
+
+.weather-temp-misc-humidity{
+    margin-right: 10px;
+}
+
+.weather-temp-misc-humidity i{
+    padding-left:2px;
+    font-size:10;
+}
+
+.weather-temp-misc-wind{
+    padding-top:unset;
+}
+
+.weather-temp-misc-wind i{
+    padding-top: unset;
+    padding-left:2px;
+    font-size:18;
 }
