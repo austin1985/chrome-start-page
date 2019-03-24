@@ -34,7 +34,7 @@ function displayTimeMessage() {
         message.textContent = "Good Morning " + user
         message.innerText = "Good Morning " + user
     }
-    setTimeout("displayTimeMessage", 60000)
+    setTimeout(function() { displayTimeMessage(); }, 60000)
 }
 
 
@@ -63,8 +63,8 @@ function getCurrentTime() {
 
     clock.textContent = hour + ":" + minutes
     clock.innerText = hour + ":" + minutes
-
-    setTimeout("getCurrentTime()", 5000)
+    
+    setTimeout(function() { getCurrentTime(); }, 5000)
 }
 
 

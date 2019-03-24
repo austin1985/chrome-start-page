@@ -16,7 +16,6 @@ function updateWeatherInfo() {
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                 let response = JSON.parse(this.response)
-                console.log(response)
                 localStorage.setItem("weatherDataWeatherId", response.weather[0].id)
                 localStorage.setItem("weatherDataLocation", response.name)
                 localStorage.setItem("weatherDataCurrentTemp", response.main.temp)
@@ -47,49 +46,41 @@ function getWeatherIconMainDiv() {
     }
 
     if (weatherId >= 200 && weatherId < 300) {
-        console.log("Thunderstorm")
         icon = '<i class="wi wi-thunderstorm" ></i >'
 
     }
     if (weatherId >= 300 && weatherId < 400) {
-        console.log("Drizzle")
         icon = '<i class="wi wi-sprinkle" ></i >'
     }
     if (weatherId >= 500 && weatherId < 600) {
-        console.log("Rain")
         icon = '<i class="wi wi-rain" ></i >'
     }
     if (weatherId >= 600 && weatherId < 700) {
-        console.log("Snow")
+
         icon = '<i class="wi wi-snow" ></i >'
     }
     if (weatherId >= 700 && weatherId < 800) {
         if (weatherId == 721) {
             icon = '<i class="wi wi-day-haze" ></i >'
         } else {
-            console.log("Fog/Dust/Ash/Tornado")
             icon = '<i class="wi wi-fog" ></i >'
         }
     }
 
     if (weatherId == 800) {
-        console.log("Clear")
         icon = '<i class="wi wi-day-sunny"></i>'
     }
 
     if (weatherId == 801) {
-        console.log("Cloud, 11-25%")
         icon = '<i class="wi wi-cloud"></i>'
     }
 
     if (weatherId == 802) {
-        console.log("Cloud, 25-50%")
         icon = '<i class="wi wi-cloudy"></i>'
 
     }
 
     if (weatherId == 803 || weatherId == 804) {
-        console.log("Cloud, 50%-100%")
         icon = '<i class="wi wi-cloudy"></i>'
     }
 
@@ -156,7 +147,7 @@ function getTemperatureDiv() {
 
 
 function weatherWidgetLoop() {
-    console.log("test")
+
     var widget = document.getElementById('weather-wrapper')
 
     if (localStorage.getItem("weatherDataWeatherId") === null) {
@@ -164,63 +155,19 @@ function weatherWidgetLoop() {
         widget.innerHTML = '<div class="weather-content">' + "N/A" + '</div>'
 
     } else {
-
+        updateWeatherInfo()
         var widgetMainIcon = getWeatherIconMainDiv()
         var widgetTempBlock = getTemperatureDiv()
 
         widget.innerHTML = '<div class="weather-content">' + widgetMainIcon + widgetTempBlock + '</div>'
 
     }
-    //setTimeout("weatherWidgetLoop()", 5000)
+    setTimeout(function() { weatherWidgetLoop(); }, 5000)
 }
 
 
 function displayWeatherWidget() {
 
     weatherWidgetLoop()
-
-
-
-    // var data = {
-    //     "coord": {
-    //         "lon": 21.63,
-    //         "lat": 47.53
-    //     },
-    //     "weather": [
-    //         {
-    //             "id": 300,
-    //             "main": "Clear",
-    //             "description": "clear sky",
-    //             "icon": "01n"
-    //         }
-    //     ],
-    //     "base": "stations",
-    //     "main": {
-    //         "temp": 285.13,
-    //         "pressure": 1024,
-    //         "humidity": 28,
-    //         "temp_min": 284.26,
-    //         "temp_max": 286.15
-    //     },
-    //     "visibility": 10000,
-    //     "wind": {
-    //         "speed": 1
-    //     },
-    //     "clouds": {
-    //         "all": 0
-    //     },
-    //     "dt": 1553364000,
-    //     "sys": {
-    //         "type": 1,
-    //         "id": 6665,
-    //         "message": 0.0032,
-    //         "country": "HU",
-    //         "sunrise": 1553315480,
-    //         "sunset": 1553359737
-    //     },
-    //     "id": 721472,
-    //     "name": "Debrecen",
-    //     "cod": 200
-    // }
 
 }
