@@ -1,9 +1,9 @@
 // Default variables
 var user = "User!"
 var facebook = "https://www.facebook.com/"
-var instagram = "https://www.instagram.com/"
-var linkedin = "https://www.linkedin.com/"
-var twitter = "https://twitter.com/"
+var playstation = "https://store.playstation.com/en-hu/home/games"
+var linuxGaming = "https://www.gamingonlinux.com/"
+var github = "https://github.com/"
 var youtube = "https://www.youtube.com"
 var website = "#"
 
@@ -105,14 +105,14 @@ function displayIcons() {
     if (facebook !== null) {
         markup += '<a href="' + facebook + '" target="_blank"><i class="fab fa-facebook-square"></i></a>'
     }
-    if (instagram !== null) {
-        markup += '<a href="' + instagram + '" target="_blank"><i class="fab fa-instagram"></i></a>'
+    if (github !== null) {
+        markup += '<a href="' + github + '" target="_blank"><i class="fab fa-github"></i></a>'
     }
-    if (twitter !== null) {
-        markup += '<a href="' + twitter + '" target="_blank"><i class="fab fa-twitter"></i></a>'
+    if (playstation !== null) {
+        markup += '<a href="' + playstation + '" target="_blank"><i class="fab fa-playstation"></i></a>'
     }
-    if (linkedin !== null) {
-        markup += '<a href="' + linkedin + '" target="_blank"><i class="fab fa-linkedin-in"></i></a>'
+    if (linuxGaming !== null) {
+        markup += '<a href="' + linuxGaming + '" target="_blank"><i class="fab fa-linux"></i></a>'
     }
     if (youtube !== null) {
         markup += '<a href="' + youtube + '" target="_blank"><i class="fab fa-youtube"></i></a>'
